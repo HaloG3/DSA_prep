@@ -1,0 +1,87 @@
+
+Important topics 
+
+. Advanced Arrays
+
+vectors
+
+· Advanced Matrices
+
+· Advanced Strings  https://www.pythoncheatsheet.org/cheatsheet/manipulating-strings
+
+. Searching Techniques done
+
+· Sorting Techniques https://www.geeksforgeeks.org/dsa/quick-sort-algorithm/
+
+. Stacks & Queues almost done
+
+. Linked List  https://www.geeksforgeeks.org/python/python-linked-list/
+
+. Trees 
+
+- Tries
+
+Graphs
+
+. Binary Search Trees
+
+Hashing
+
+Priority Queues
+
+Heaps
+
+
+. DFS
+
+. BFS
+
+
+Bit Manipulation  https://www.geeksforgeeks.org/dsa/all-about-bit-manipulation/
+
+Advanced Recursion and PMI
+
+· Analysis of Algorithm
+
+· Application of Searching and Sorting
+
+· BackTracking
+
+· Dynamic Programming
+
+· Greedy Programming
+
+. Graphs
+
+· Kruskal Algorithm
+
+. Prim's Algorithm
+
+. Dijkstra Algorithm
+
+· Kadane Algorithm
+
+. Longest Common Subsequence
+0-1 knapsack
+
+
+Arrays
+Stack
+Strings
+Queue
+Math +Number Th
+Map
+DP
+Trees
+Graph
+Greedy
+LinkedList
+Recursion
+Searching
+2 Pointers
+Backtracking
+Sorting
+SlidingWindows
+Bits
+
+PYQS:https://www.codechef.com/practice/tcs-interview-questions

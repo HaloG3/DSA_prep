@@ -1,0 +1,684 @@
+Problem Description
+Maya's String Challenge: Make it Worthy!
+
+The Challenge: Maya loves strings! To test her skills, she is given a set of strings, each with a unique cost and a "worth" value based on the sum of its character place values (a=1, b=2,... z=26). She wants to create the highest-worth main string by selecting and concatenating some of these strings within a given budget.
+
+The Catch: Some strings are contradictory - meaning they cannot coexist in the main string. If one is included, the other must be excluded.
+
+Your Task: Given the list of strings, their costs, and contradictory pairs, along with Maya's budget, determine the maximum worth of the main string she can create while adhering to these constraints.
+
+Constraints
+1 <= N, M <= 50
+
+1 <= cost of a string <= 100
+
+1 <= amount Maya have <= 500
+
+1 <= length of each string <= 20
+
+The strings will be having lower case alphabets only.
+
+If a string A is contradictory with B and B is contradictory with C, then A is not contradictory with C i.e., the term contradictory is not transitive.
+
+Input
+Line 1: Two space-separated integers: N (number of strings) and M (number of contradictory pairs).
+
+Line 2: N space-separated strings.
+
+Line 3: N space-separated integers representing the cost of each string.
+
+Lines 4 to M+3: Each line contains two space-separated strings, indicating a contradictory pair.
+
+Line M+4: A single integer representing Maya's budget.
+
+Output
+A single integer representing the maximum worth of the main string Maya can achieve.
+
+Time Limit (secs)
+1
+
+Examples
+Example 1
+
+Input
+
+9 5
+
+kite btech codevita space biscuit earth dog afraid travel
+
+5 4 8 10 2 18 15 12 11
+
+kite travel
+
+codevita earth
+
+biscuit btech
+
+space travel
+
+afraid dog
+
+10
+
+Output
+
+162
+
+Explanation
+
+Maya can select the strings {codevita, biscuit}, which have costs of 8 and 2, respectively, which are within her budget i.e.., 8+2 <= 10. The worth of the string codevita is 79, and the worth of biscuit is 83, giving a total worth of 162, which is the maximum possible.
+
+Example 2
+
+Input
+
+5 5
+
+crow sky park thursday flying
+
+6 3 4 9 13
+
+flying sky
+
+sky thursday
+
+crow sky
+
+park sky
+
+park flying
+
+20
+
+Output
+
+221
+
+Explanation
+
+Maya can select the strings {crow, park, thursday}, which have costs of 6, 4 and 9, respectively, which are within her budget i.e.., 6+4+9 <= 20. The worth of the string crow is 59, park is 46 and the worth of thursday is 116, giving a total worth of 221, which is the maximum possible.
+
+
+
+###########################
+
+Problem Description
+Samaira is playing a mobile game where she needs to connect dots to form a "bowl" that catches falling "fruits".
+
+The Challenge:
+
+Bowl Creation: Connect specific dots to create a bowl shape.
+Fruit Catching: The bowl must be designed so that designated "fruit" dots fall directly into it without hitting the edges and being deflected.
+Your Task: Calculate the perimeter of the bowl formed by connecting the dots.
+
+Accuracy: Round the calculated perimeter to the nearest integer. For example, if the perimeter is 3.5, round it to 4.
+Note: The distance between two coordinates is calculated by using formula:
+
+sqrt ([(x2 - x1)2 + (y2 - y1)2]) where, (x1, y1) and (x2, y2) are the two coordinates.
+
+Constraints
+4 <= N <= 50
+
+Input
+First line contains 'N' defining number of dots scattered on the screen.
+
+Next 'N' lines contain the coordinates (x, y space-separated integers) of scattered 'N' dots.
+
+Output
+Single line integer (rounded up to the nearest integer of the calculated length).
+
+Time Limit (secs)
+1
+
+Examples
+Example 1
+
+Input
+
+8
+
+3 4
+
+5 5
+
+2 2
+
+2 5
+
+6 4
+
+4 1
+
+1 3
+
+4 3
+
+Output
+
+7
+
+Explanation
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@26d10f2e:image1.png
+
+The above structure describes the bowl made in this level. The dots - (1, 3), (2, 2), (4, 1) and (6, 4) can be connected to build a bowl-like shape and every other dot will directly fall into the structure made. Since the connected dots can define a bowl, the calculated perimeter might be in fractional number. The perimeter calculated will be 7.26 and thus its nearest integer will be 7.
+
+Example 2
+
+Input
+
+14
+
+3 9
+
+4 9
+
+7 9
+
+2 7
+
+5 7
+
+9 6
+
+1 5
+
+6 5
+
+7 0
+
+3 5
+
+3 1
+
+2 3
+
+8 2
+
+4 0
+
+Output
+
+15
+
+Explanation
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@26d10f2e:image2.png
+
+The above structure describes the bowl made in the level. The dots - (1, 5), (3, 1), (4, 0), (7, 0), (8, 2) and (9, 6) can be connected to create a bowl-like shape whereas rest of the dots will represent 'fruits' which will fall into the bowl. Therefore, the perimeter of the created bowl will be calculated as 15.25 and thus its nearest integer will be 15.
+
+
+
+#############################
+
+Agilans Project
+Problem Description
+Agilan, a final-semester undergraduate student, needs to reach his teammate Rabin's house to finalize their major project due in February.
+
+Rabin provides Agilan with detailed driving directions consisting of turns and distances at traffic signals. However, due to heavy traffic, Agilan makes one wrong turn while covering the correct distance. He successfully follows the remaining instructions accurately.
+
+You are given the coordinates of Rabin's house and a set of directions provided by Rabin (which include "left," "right," "straight," and "back" turns).
+
+Your task is to:
+
+Identify the specific turn Agilan made incorrectly.
+Determine the correct turn he should have taken.
+Note: Agilan starts his journey facing 'north' initially.
+
+Instructions are elaborated below for brevity:
+
+1. left - This instructs Agilan to turn towards his left (for e.g., North to East, East to South, South to West, West to North) from wherever he is going on.
+
+2. right - This instructs Agilan to turn towards his right from wherever he is going on.
+
+3. straight - This instructs Agilan to go straight continuing with the same direction wherever he is going on.
+
+4. back - This instructs Agilan to turn back (U-turn, for e.g. North to South, South to North, East to West, West to East) from wherever he is going on.
+
+Constraints
+3 <= N <= 104
+
+Distance travelled in one instruction <= 50
+
+Input
+First line contains and integer 'N' - indicating number of instructions Rabin has provided to Agilan for visiting his place.
+
+Next N lines consist of N instructions each defining the direction and its corresponding distance.
+
+Last 2 lines consists of the co-ordinates (x, y space-separated integers) defining location of Agilan's residence and Rabin's residence, respectively.
+
+Output
+Output "No" if Agilan cannot reach Rabin's house by correcting only one turn.
+
+Output "Yes" followed by:
+
+The specific incorrect turn Agilan made.
+The distance covered while taking the incorrect turn.
+The correct turn he should have taken instead.
+The distance associated with the correct turn.
+For exact printing format refer the Examples section
+
+Time Limit (secs)
+1
+
+Examples
+Example 1
+
+Input
+
+5
+
+right 5
+
+left 3
+
+left 3
+
+right 1
+
+right 2
+
+0 0
+
+0 2
+
+Output
+
+Yes
+
+right 1
+
+left 1
+
+Explanation
+
+Agilan starts his journey from the coordinates (0, 0), facing north. The path he followed is represented in blue, while the correct path is depicted in orange. Upon analysis, it is evident that Agilan would have reached Rabin's residence correctly if he had followed the second-to-last instruction properly. Instead of proceeding right for 1 unit at (2, 3), he should have taken a left turn for 1 unit. Therefore, the incorrect instruction is "right 1", and the correct instruction is "left 1".
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@94f6bfb:image1.png
+
+Example 2
+
+Input
+
+8
+
+straight 5
+
+right 2
+
+right 7
+
+right 5
+
+straight 1
+
+left 2
+
+left 3
+
+right 4
+
+0 0
+
+12 14
+
+Output
+
+No
+
+Explanation
+
+Agilan starts his journey from the coordinates (0, 0) facing north. The path he followed is represented in blue. It can be clearly deduced that by correcting exactly one path, Agilan will not be able to reach Rabin's residence (12, 14). Therefore, the answer is 'No'.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@94f6bfb:image2.png
+
+########################
+
+Problem Description
+Two friends are shopping for friendship bands at a mall. They discover that each pair of bands comes in a transparent case where the bands are tangled together, impossible to separate without cutting!
+
+To avoid ruining their bands, they decide to choose a pair that is properly intact. Each case is represented as a square matrix (size S x S). Each band within the case:
+
+Has a starting position within the matrix (coordinates).
+Is defined by a sequence of characters ("u," "d," "l," and "r") representing movements up, down, left, and right.
+Loops back to its starting position after following the entire sequence.
+The top-left corner of the matrix is always index (0, 0).
+
+For example, Assume the case size as 10, starting position is 0 1 and sequence rrrrddddlllluuuu. The diagram below illustrates this:
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@2f94c4db:image1.png
+
+When placing the two bands in the case, assume each band occupies the cells sequentially from its starting position. The band placed first will lie beneath, while the second band will overlap it.
+
+Given the placement details of two bands, help the friends determine whether the bands in the case can be separated without cutting either of them.
+
+Constraints
+5 < S < 25
+
+Each band will overlap the other only, without overlapping itself.
+
+Input
+First line consists of a single integer S, representing the side of the square matrix.
+
+Second line consists of two space separated integers denoting starting position of band 1.
+
+Third line contains the sequence of characters "u," "d," "l," and "r" denoting the placement path of band 1.
+
+Fourth line consist of two space separated integers denoting starting position of band 2.
+
+Fifth line contains the sequence of characters "u," "d," "l," and "r" denoting the placement path of band 1.
+
+Output
+A single integer representing the maximum number of cells where one band overlaps the other if they can be separated without cutting;
+
+Otherwise, print "Impossible."
+
+Time Limit (secs)
+1
+
+Examples
+Example 1
+
+Input
+
+10
+
+0 1
+
+rrrrddddlllluuuu
+
+2 3
+
+rrrrddddlllluuuu
+
+Output
+
+Impossible
+
+Explanation
+
+The image below depicts the input described above.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@2f94c4db:image2.png
+
+At the cell (2, 5) band2 will be placed first, later band1 will be placed above it.
+
+At the cell (4, 3) band1 will be placed first, later band2 will be placed above it.
+
+From the image you can see that the two bands cannot be separated without cutting any one of it. Hence print Impossible.
+
+Example 2
+
+Input
+
+7
+
+0 4
+
+rddddllluuuurr
+
+2 0
+
+dddrruuuuulldd
+
+Output
+
+5
+
+Explanation
+
+The image below depicts the input described above.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@2f94c4db:image3.png
+
+Band 1 is placed entirely above Band 2, meaning they are not interlocked and can be separated without cutting. Band 2 overlaps Band 1 in 5 cells, while Band 1 does not overlap Band 2 at all. Therefore, the maximum overlap is 5, and the output is 5.
+
+
+################
+Problem Description
+
+Welcome to Bubble Land, an underwater world where everything is bubbly! You are navigating with a bubble-shaped vehicle through this fantastical place, starting at one point and aiming for another.
+
+Here is the catch:
+
+Bubble Buildings: Structures are represented by their centre coordinates and radius, all enclosed within square borders.
+Tax Lines: Imaginary lines connect building centres, acting like toll roads. Crossing a tax line incurs a fee (touching does not!). These lines don't intersect.
+Your Vehicle: It is also bubble-shaped, with its own centre and radius.
+Your Mission:
+
+Find the path between your starting point and destination while avoiding:
+
+Overlapping any building.
+Crossing tax lines unnecessarily.
+Navigate Bubble Land and minimize those annoying taxes!
+
+Constraints
+
+5 < S <= 50
+
+3 < N < 20
+
+0 <= x, y <= S
+
+0 < Radius of Buildings < 10
+
+1 < Radius of vehicle < 10
+
+0 < Tax lines < 20
+
+Input
+
+Line 1: A single integer S, representing the length of one side of Bubble Land (the size of the square area).
+
+Line 2: Three space-separated integers:
+
+x: The x-coordinate of your vehicle's centre.
+y: The y-coordinate of your vehicle's centre.
+r: The radius of your bubble vehicle.
+Line 3: Two space-separated integers:
+
+x: The x-coordinate of the destination.
+y: The y-coordinate of the destination.
+Line 4: A single integer N, representing the number of buildings in Bubble Land.
+
+Lines 5 to N+4: Each line contains three space-separated integers:
+
+x: The x-coordinate of a building's centre.
+y: The y-coordinate of a building's centre.
+r: The radius of the building.
+Line N+5: A single integer T, representing the number of tax lines in Bubble Land.
+
+Lines N+6 to N+T+5: Each line contains two space-separated integers:
+
+: The index of bubble building of one end of a tax line (building centre).
+: The index of bubble building the other end of a tax line .
+Index of the building starts from 1 , index the buildings in the given order in input
+
+
+Output
+
+Single integer representing minimum number of tax lines to be crossed. If the destination is unreachable, print Impossible.
+
+Time Limit (secs)
+
+1
+
+Examples
+
+Example 1
+
+Input
+
+25
+
+2 2 2
+
+15 11
+
+4
+
+7 11 5
+
+14 6 2
+
+22 4 2
+
+20 12 2
+
+4
+
+1 2
+
+2 3
+
+2 4
+
+3 4
+
+Output
+
+2
+
+Explanation
+
+The below diagram represents the given input.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@11a82d0f:image1.png
+
+The path to reach destination without touching bubble building would be passing through tax lines drawn between buildings [2,3] and [2,4]. Here we are crossing 2 tax lines and that is the minimum possible. Hence, print the same.
+
+Example 2
+
+Input
+
+25
+
+4 4 3
+
+21 21
+
+4
+
+5 17 4
+
+10 9 4
+
+15 16 4
+
+20 9 4
+
+3
+
+1 2
+
+2 3
+
+3 4
+
+Output
+
+Impossible
+
+Explanation
+
+The below diagram represents the given input.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@11a82d0f:image2.png
+
+From the image, it is not possible to reach destination without touching the bubble buildings. Hence print Impossible.
+######################
+
+Problem Description
+You're tasked with calculating the number of unique chessboard positions achievable after 'd' plies (one-half moves).
+
+Here's the setup:
+
+Chessboard: Standard 8x8 grid.
+Pieces: At most three pieces of the same color: Queen, Rook, and Bishop.
+Placement: At least one of each piece must be present on the board.
+Depth (d): The number of plies (moves) to consider. A ply usually represents a half move in a 2-player game. In our case, since only one coloured pieces are placed, it should be construed to mean a move.
+Your Goal: Determine the total number of unique chessboard positions possible after 'd' plies.
+
+For better understanding the Chessboard, go through the details below.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@22d6cac2:image1.png
+
+The positions of the chess pieces are represented using three characters:
+
+The first character is either Q, B, or R, denoting a Queen, Bishop, or Rook, respectively.
+The second character ranges from A to H, indicating the column in the chessboard.
+The third character ranges from 1 to 8, indicating the row in the chessboard.
+For example, QA8 represents a Queen positioned on the 8th row of the A column.
+
+Constraints
+0 < d < 5
+
+Input
+The first line specifies the positions of the pieces, separated by spaces.
+The second line indicates d, the ply depth
+
+Output
+A single integer representing number of unique board positions across a depth of d plies
+
+Time Limit (secs)
+1
+
+Examples
+Example 1
+
+Input
+
+QA3 RB3
+
+1
+
+Output
+
+27
+
+Explanation
+
+Below shows the initial state. After every move, the board position will be recorded.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@22d6cac2:image2.png
+
+In this chess position, either the Queen or the Rook will be moved on the next turn (one ply).
+
+Queen's Movement: The Queen can be legally placed in 14 distinct squares: a1, a2, a4 to a8, b2, c1, b4 to f8.
+Rook's Movement: The Rook can occupy 13 unique squares: b1, b2, b4 to b8, and c3 to h3.
+Therefore, there are a total of 14 + 13 = 27 possible board positions after one ply (one move).
+
+Print 27 as the output, representing the number of unique board positions achievable within a depth of 1 ply.
+
+Example 2
+
+Input
+
+QA3
+
+2
+
+Output
+
+64
+
+Explanation
+
+At a depth of 2 positions on an empty board (Queen is the only piece on the board), it will cover all 64 distinct squares. Hence only 64 unique positions are possible. Hence print 64 as output.
+
+Example 3
+
+Input
+
+QA3 RB3
+
+2
+
+Output
+
+388
+
+Explanation
+
+At a depth of 2 position with Queen at a3, Rook at b3, 388 is the number of unique board positions achievable within a depth of 2 ply.
+
