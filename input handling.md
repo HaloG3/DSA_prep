@@ -1,14 +1,12 @@
-Here’s a **complete guide with intuition** to input parsing in DSA problem-solving, so you can master it and apply it in any competitive coding or real interview scenario.
-
+Here’s a **complete guide with intuition** to input parsing in DSA problem-solving,
 ---
 
-## ✅ 1️⃣. **Single Integer Input**
 
 ### 📚 Problem Example:
 
 > The first line contains a single integer `N`.
 
-### ✅ Code Pattern:
+
 
 ```python
 N = int(input())
@@ -22,11 +20,11 @@ N = int(input())
 
 ## ✅ 2️⃣. **Multiple Space-separated Integers on One Line**
 
-### 📚 Example:
+
 
 > The first line contains two integers `N` and `K`.
 
-### ✅ Code Pattern:
+
 
 ```python
 N, K = map(int, input().split())
@@ -41,11 +39,11 @@ N, K = map(int, input().split())
 
 ## ✅ 3️⃣. **Array Input on a Single Line**
 
-### 📚 Example:
+
 
 > Next line contains `N` integers.
 
-### ✅ Code Pattern:
+
 
 ```python
 arr = list(map(int, input().split()))
@@ -53,18 +51,17 @@ arr = list(map(int, input().split()))
 
 ### 💡 Intuition:
 
-* Use when an array of elements is given in space-separated format.
+* **Use when an array of elements is given in space-separated format.**
 * List stores the array for further use.
 
 ---
 
 ## ✅ 4️⃣. **Multiple Lines of Input (Fixed Number of Lines)**
 
-### 📚 Example:
+
 
 > Next `M` lines contain two space-separated integers.
 
-### ✅ Code Pattern:
 
 ```python
 pairs = []
@@ -82,11 +79,11 @@ for _ in range(M):
 
 ## ✅ 5️⃣. **Matrix Input (2D Array)**
 
-### 📚 Example:
+
 
 > Next `N` lines contain `M` integers each.
 
-### ✅ Code Pattern:
+
 
 ```python
 matrix = []
@@ -104,11 +101,11 @@ for _ in range(N):
 
 ## ✅ 6️⃣. **Single String Input**
 
-### 📚 Example:
+
 
 > A single line contains a string.
 
-### ✅ Code Pattern:
+
 
 ```python
 s = input()
@@ -122,11 +119,10 @@ s = input()
 
 ## ✅ 7️⃣. **Multiple Strings on One Line**
 
-### 📚 Example:
+
 
 > Two strings separated by space.
 
-### ✅ Code Pattern:
 
 ```python
 str1, str2 = input().split()
@@ -211,12 +207,4 @@ for _ in range(M):
 
 ---
 
-## ✅ Practice Recommendation:
 
-Take problems on platforms like LeetCode, Codeforces, or AtCoder where input formats are given, and practice only input parsing first.
-👉 Example problem for practice:
-[https://www.spoj.com/problems/INTEST/](https://www.spoj.com/problems/INTEST/) (Simple input parsing + looping)
-
----
-
-Do you want me to give you a small practice set of input-parsing problems with expected outputs to solve step by step?
