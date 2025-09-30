@@ -8,3 +8,7 @@ def perfectsq(n):
     else: 
         return False
 print(perfectsq(1))
+# for printing list of these
+b = 100
+lst = [i for i in range(b) if perfectsquare(i)==True]
+print('Perfectsquare number are : ',lst)
