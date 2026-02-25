@@ -1,0 +1,2 @@
+python 150+ questions:     https://www.interviewbit.com/python-interview-questions/
+java 150+ queestions:      https://www.interviewbit.com/java-interview-questions/
