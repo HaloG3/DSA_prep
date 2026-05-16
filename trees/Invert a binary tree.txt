@@ -1,6 +1,8 @@
+inversoion means : swapping the left root with right root of every node 
+
 def invertTree(self,root):
     if not root:
-    return None:
+        return None
     # Swap the child Node
     tmp = root.left
     root.left = root.right 
