@@ -1,5 +1,3 @@
-Here’s a **complete guide with intuition** to input parsing in DSA problem-solving,
----
 
 
 ### 📚 Problem Example:
